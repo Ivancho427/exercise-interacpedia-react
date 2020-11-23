@@ -1,38 +1,98 @@
-.App {
-  text-align: center;
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+body {
+  background-color: rgb(41, 40, 40);
+  color: #fff;
+  font-family: "Roboto", sans-serif;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  min-height: 100vh;
+  padding: 32px;
 }
 
-.App-link {
-  color: #61dafb;
+h1 {
+  margin: 32px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.board {
+  border: 16px solid #ff652f;
+  background-color: #ff652f;
+  width: 500px;
+  height: 500px;
+  display: grid;
+  grid-template: repeat(3, 1fr) / repeat(3, 1fr);
+  gap: 16px;
+
+}
+
+@media(max-width:420px) {
+  .board {
+
+    width: 350px;
+    height: 350px;
+    display: grid;
+    grid-template: repeat(3, 1fr) / repeat(3, 1fr);
+    gap: 16px;
+
   }
-  to {
-    transform: rotate(360deg);
+}
+
+@media(max-width:350px) {
+  .board {
+
+    width: 200px;
+    height: 200px;
+    display: grid;
+    grid-template: repeat(3, 1fr) / repeat(3, 1fr);
+    gap: 16px;
+
   }
+}
+
+
+.squares {
+  background: #f1eaea;
+  border: none;
+  font-size: 80px;
+  cursor: pointer;
+  outline: none;
+}
+
+.X {
+  color: red;
+}
+
+.info-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+h3 {
+  padding: 16px;
+}
+
+li {
+  list-style: none;
+}
+
+.info-wrapper button {
+  background-color: #ff652f;
+  color: #fff;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 8px;
+  margin: 8px 16px;
+  align-items: center;
+}
+
+.game {
+  text-align: center;
 }
